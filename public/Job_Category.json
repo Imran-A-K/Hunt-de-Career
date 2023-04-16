@@ -1,0 +1,26 @@
+[
+    { 
+      "id" : 1,
+      "logo": "./Job_Category_images/webDeveloper.svg",
+      "name": "Web Developer",
+      "jobs_available": "10+ jobs available"
+    },
+    {
+      "id" : 2,
+      "logo": "./Job_Category_images/dataAnalyst.svg",
+      "name": "Data Analyst",
+      "jobs_available": "20+ jobs available"
+    },
+    {
+      "id" : 3,
+      "logo": "./Job_Category_images/marketingManager.svg",
+      "name": "Marketing Manager",
+      "jobs_available": "13+ jobs available"
+    },
+    { 
+      "id" : 4,
+      "logo": "./Job_Category_images/sde.svg",
+      "name": "Software Engineer",
+      "jobs_available": "15+ jobs available"
+    }
+  ]

@@ -1,0 +1,45 @@
+import React from 'react'
+import salaryIcon from '../assets/Icons/Frame.png'
+import jobIcon from '../assets/Icons/Frame-1.png'
+import phoneIcon from '../assets/Icons/Frame-2.png'
+import mailIcon from '../assets/Icons/Frame-3.png'
+import locationIcon from '../assets/Icons/Frame-4.png'
+import locationImg from '../assets/Icons/Frame-4.png'
+import { Link } from 'react-router-dom'
+
+const AppliedJobCards = ({logo, jobName,company, jobType, workType,location,salary,id}) => {
+  return (
+    <div className='flex justify-between border rounded-md p-5 mb-5 w-[900px]'>
+        <div className='flex'>
+        <div className='bg-neutral-100 flex justify-center items-center w-[150px] rounded-md'>
+        <img className='w-[110px]' src={logo} alt="" />
+        </div>
+        <div className='flex flex-col pl-6 justify-start'> 
+        <h2 className='text-lg font-bold pt-4 pb-3 text-slate-800'>{jobName}</h2>
+        <p className='text-slate-700 pb-3'>{company}</p>
+        <div className='inline-flex gap-3 mb-4'>
+        <button className='border-[2px] rounded-[4px] px-4 py-2 text-indigo-600 border-indigo-600 text-sm font-bold'>{workType}</button>
+        <button className='border-[2px] rounded-[4px] px-4 py-2 text-indigo-600 border-indigo-600 text-sm font-bold'>{jobType}</button>
+        </div>
+        <div className='inline-flex gap-3 md:gap-2 mb-5'>
+        <div className='inline-flex gap-1 -ml-1 items-center'>
+        <img className='max-[600px]:w-[25px] max-[600px]:h-[25px]' src={locationImg} alt="" />
+        <p className='font-semibold max-[600px]:text-xs text-slate-700 '>{location}</p>
+        </div>
+        <div className='inline-flex gap-1 items-center'>
+        <img className='max-[600px]:w-[25px] max-[600px]:h-[25px]]' src={salaryIcon} alt="" />
+        <p className='font-semibold text-slate-700 max-[600px]:text-xs'> Salary : {salary}</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div className='my-auto'>
+        <Link to={`/job/${id}`} className="">
+              <button className='bg-gradient-to-r from-indigo-400 to-purple-500 text-white font-bold rounded-md px-4 py-2 cursor-pointer'>View Details</button>
+            </Link>
+        </div>
+    </div>
+  )
+}
+
+export default AppliedJobCards
